@@ -19,7 +19,7 @@
   //set set motor speed to 75% duty cycle 191
   //set set motor speed to 50% duty cycle 127
   //set motor to 25% duty cycle 64
-
+  //used Timer0 as fast PWM to control speed
 	void set_Motors_Speed(int rightMotor, int leftMotor){
 		//set Enable pins to output
 		EN_PORT |= (1<<ENA) | (1<<ENB);
@@ -32,7 +32,7 @@
 		OCR0A = rightMotor;
 
 	}
-  
+
 	void forward(){
 		CLEAR_BIT(IN_PORT,IN1);
 		SET_BIT(IN_PORT,IN2);

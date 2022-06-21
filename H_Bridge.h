@@ -3,11 +3,11 @@
  *
  * Created: 6/21/2022 5:12:25 PM
  *  Author: Ahmed Othman
- */ 
+ */
 
 /*
 
-This Driver wrote for atmega328p and for only two motors 
+This Driver wrote for atmega328p and for only two motors
 Right Motor Connected to IN1 and IN2 and OC0A
 Left Motor Connected to IN3 and IN4 and OC0B
 
@@ -34,6 +34,7 @@ Left Motor Connected to IN3 and IN4 and OC0B
 #define ENB PORTD5 //OC0B
 
 void init_HBridge(void);
+//used Timer0 as fast PWM to control speed 
 void set_Motors_Speed(int rightMotor, int leftMotor);
 void forward();
 void backward();
@@ -42,7 +43,7 @@ void left();
 void stop();
 void rotate_right();
 void rotate_left();
-	
+
 
 
 #endif /* H-BRIDGE_H_ */
